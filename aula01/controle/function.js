@@ -5,6 +5,15 @@ $(document).ready(function(){
 
         let dados = $('#form').serialize()
 
-        console.log(dados)
+        $.ajax({
+            type: 'POST',
+            dataType: 'JSON',
+            assync: true,
+            data: dados,
+            url: '../modelo/retorno.php',
+            success: function(){
+                
+            }
+        })
     });
 }); 
