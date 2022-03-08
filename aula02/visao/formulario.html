@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro MVC</title>
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-8 col-md-6">
+                <div class="alert-primary shadow">
+                    <h1 class="text-center text-white">
+                        Formulário Pessoal!
+                    </h1>
+                    
+                    
+                    <form class="mt-5" id="form">
+                        <div class="form-group">
+                            <input type="text" name="NOME" id="NOME" class="form-control" placeholder="Digite seu nome:">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="DATA" id="DATA" class="form-control" placeholder="Digite sua Data de Nascimento:">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="BEBIDA" id="BEBIDA" class="form-control" placeholder="Digite sua Bebida Preferida">
+                        </div>
+                        <div class="form-group row justify-content-end">
+                            <div class="col-12 col-sm-8 col-md-6">
+                                <button class="btn btn-primary btn-block btn-send shadow">
+                                    Enviar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="retorno" class="row justify-content-center">
+        
+    </div>
+   
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../controle/function.js"></script>
+</body>
+</html>
