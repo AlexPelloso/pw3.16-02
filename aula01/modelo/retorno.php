@@ -22,7 +22,7 @@ if(empty($NOME)){
         );
         break;
         case '3' : $dados = array(
-            "tipo" => 'peixe2.jpg',
+            "tipo" => 'peix.jpg',
             "mensagem" => 'Seja bem vindo, '.$NOME. ', sabemos que seu animal preferido é o peixe'   
         );
         break;
