@@ -1,17 +1,17 @@
 <?php
 
-$nome = $_REQUEST['nome'];
-$bebida = $_REQUEST['bebida'];
-$data = $_REQUEST['data'];
+$NOME = $_REQUEST['nome'];
+$BEBIDA = $_REQUEST['bebida'];
+$DATA = $_REQUEST['data'];
 
-$anoAtual = date('Y');
+$aAtual = date('Y');
 
-$anoNasc = date("Y", strtotime($data));
+$aNasc = date("Y", strtotime($DATA));
 
-$idade = $anoAtual - $anoNasc;
+$IDADE = $aAtual - $aNasc;
 
 
-if(empty($nome && $bebida && $data)){
+if(empty($NOME && $BEBIDA && $DATA)){
     $dados = array(
 
         "tipo" => 'error',
@@ -20,13 +20,13 @@ if(empty($nome && $bebida && $data)){
 
 } else {
 
-    if($idade >= 18){
+    if($IDADE >= 18){
         $dados = array(
-            "mensagem" =>  'olá ' . $nome . ' sua bebida favorita é ' .$bebida . '. <br> Sua idade é ' . $idade . ', portanto você é de maior '
+            "mensagem" =>  'Olá ' . $NOME . ' sua bebida favorita é ' .$BEBIDA . '. <br> Sua idade é ' . $IDADE . ', portanto você é de maior e pode consumir bebida alcólica'
         );
     }else {
         $dados = array(
-            "mensagem" =>  'olá ' . $nome . ' sua bebida favorita é ' .$bebida . '. <br> Sua idade é ' . $idade. ', portanto você é de menor '
+            "mensagem" =>  'Olá ' . $NOME . ' sua bebida favorita é ' .$BEBIDA . '. <br> Sua idade é ' . $IDADE. ', portanto você é de menor e não pode consumir bebida alcólica'
         );
     }
     
