@@ -15,7 +15,7 @@ if(empty($nome && $bebida && $data)){
     $dados = array(
 
         "tipo" => 'error',
-        "mensagem" => 'campos não definidos.'
+        "mensagem" => 'A campos que precisam ser completados.'
     );
 
 } else {
