@@ -1,33 +1,38 @@
 <?php
 
-$NOME = $_REQUEST['NOME'];
-$ANIMAL = $_REQUEST['ANIMAL'];
+$nome = $_REQUEST['nome'];
+$bebida = $_REQUEST['bebida'];
+$data = $_REQUEST['data'];
 
-if(empty($NOME)){
+$anoAtual = date('Y');
+
+$anoNasc = date("Y", strtotime($data));
+
+$idade = $anoAtual - $anoNasc;
+
+
+if(empty($nome && $bebida && $data)){
     $dados = array(
+
         "tipo" => 'error',
-        "mensagem" => 'Existe(m) campo(s) a ser(em) prenchido(s).'
+        "mensagem" => 'campos não definidos.'
     );
-}else{
 
-    switch($ANIMAL){
-        case '1' : $dados = array(
-            "tipo" => 'cachorro.jpg',
-            "mensagem" => 'Seja bem vindo, '.$NOME. ', sabemos que seu animal preferido é o cachorro'   
+} else {
+
+    if($idade >= 18){
+        $dados = array(
+            "mensagem" =>  'olá ' . $nome . ' sua bebida favorita é ' .$bebida . '. <br> Sua idade é ' . $idade . ', portanto você é de maior '
         );
-        break;
-        case '2' : $dados = array(
-            "tipo" => 'gato.jpg',
-            "mensagem" => 'Seja bem vindo, '.$NOME. ', sabemos que seu animal preferido é o gato'   
+    }else {
+        $dados = array(
+            "mensagem" =>  'olá ' . $nome . ' sua bebida favorita é ' .$bebida . '. <br> Sua idade é ' . $idade. ', portanto você é de menor '
         );
-        break;
-        case '3' : $dados = array(
-            "tipo" => 'peix.jpg',
-            "mensagem" => 'Seja bem vindo, '.$NOME. ', sabemos que seu animal preferido é o peixe'   
-        );
-        break;
     }
+    
+    
 
+   
 }
 
 echo json_encode($dados);
