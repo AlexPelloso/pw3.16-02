@@ -1,9 +1,7 @@
 $(document).ready(function(){
-    //monitora o clique do botão
     $('.btn-send').click(function(e){
         e.preventDefault()
 
-        //coletar as informações digitadas/selecionadas no formulário
         let dados = $('#form').serialize()
 
         $('#retorno').empty()
